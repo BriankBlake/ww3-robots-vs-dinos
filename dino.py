@@ -1,4 +1,4 @@
-class dino: 
+class Dino: 
    
    
     def __init__(self, name, attk_pwr):

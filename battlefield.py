@@ -1,8 +1,8 @@
 from fleet import Fleet
-from herd import herd
+from herd import Herd
 
 fleet = Fleet()
-herd = herd()
+herd = Herd()
 
 
 
@@ -19,21 +19,21 @@ class Battlefield:
 
     def battle(self):
         round_number = 1
-        print(f"Round {round_number} go! Dino's goes first.")
-        self.dino_turn(self.herd.dino[0])
+        print(f"Round {round_number} go!")
+        self.dinos_turn(self.herd.dino[0])
         print("Dino's turn end, robots go. ")
         self.robots_turn(self.fleet.robots[0])
         round_number += 1
 
     def dinos_turn(self, attking_dinos):
-        print(f"{attking_dinos} dino turn go")
+        print(f"{attking_dinos.name} turn")
         # self.herd.dinos.attack(self.fleet.robots[0])
-        self.show_dinos_opponent_options()
+        self.show_dino_opponent_options()
 
 
     def robots_turn(self, robots):
-        print(f"{robots} robots go now")
-        self.show_robots_opponent_options()
+        print(f"{robots.name} go now")
+        self.show_robot_opponent_options()
 
 
     def show_dino_opponent_options(self):
@@ -41,6 +41,8 @@ class Battlefield:
 
     def show_robot_opponent_options(self):
         print("Dinos pick a Gladiator")
+
+        
 
     # def display_winners(self):
     #     if herd.health == 0:
