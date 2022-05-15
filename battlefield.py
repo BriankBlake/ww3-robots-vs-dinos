@@ -18,12 +18,12 @@ class Battlefield:
         self.battle()
 
     def battle(self):
-        round_number = 1
+        round_number = 0
         print(f"Round {round_number} go!")
         self.dinos_turn(self.herd.dino[0])
         print("Dino's turn end, robots go. ")
         self.robots_turn(self.fleet.robots[0])
-        round_number += 1
+        round_number += 0
 
     def dinos_turn(self, attking_dinos):
         print(f"{attking_dinos.name} turn")
@@ -44,13 +44,13 @@ class Battlefield:
 
         
 
-    # def display_winners(self):
-    #     if herd.health == 0:
-    #         print("Robots defeated the dinos so the winner is Robots!")
-    #     if  fleet.health == 0:
-    #         print("Dinos defeatd the robots so the winner is Dinos!")
-    #     else:
-    #         Battlefield()  
+    def display_winners(self):
+        if herd.h == 0:
+            print("Robots defeated the dinos so the winner is Robots!")
+        if  fleet.hp == 0:
+            print("Dinos defeatd the robots so the winner is Dinos!")
+        else:
+            Battlefield()  
 
 
 
